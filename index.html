@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="asapdev" />
+    <meta name="description" content="Chatlog Magician for LS-RP" />
+    <title>Chatlog Magician</title>
+
+    <meta
+      name="keywords"
+      content="LSRP, LS-RP, SA-MP, chatlog magician, chatlog, magician"
+    />
+
+    <link rel="stylesheet" href="css/boostrap.css" crossorigin="anonymous" />
+    <link href="css/sp-style.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.png" />
+  </head>
+
+  <body>
+    <br />
+
+    <div class="container">
+      <div class="row name">
+        <div class="col-xs-12">
+          <input type="hidden" class="form-control" id="name" />
+        </div>
+      </div>
+      <br />
+      <div class="clog_settings">
+        <div class="row" id="bal">
+          <div class="col-xs-12 fill-container">
+            <label for="font-label">font size</label>
+            <input
+              name="font-label"
+              id="font-label"
+              type="number"
+              min="16"
+              max="64"
+            />
+          </div>
+        </div>
+        <div class="row" id="jobb">
+          <div class="col-xs-12">
+            <input type="text" id="color-picker" class="color-picker-input" />
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <center>
+        <div class="textarea-container">
+          <textarea
+            class="form-control textarea-input"
+            rows="15"
+            placeholder=""
+          ></textarea>
+          <div class="logo-overlay">
+            <img src="lsrp.png" alt="Logo" />
+          </div>
+        </div>
+        <br />
+        <div style="margin-top: 0px">
+          <button
+            id="downloadOutputTransparent"
+            class="btn btn-success float-right"
+          >
+            Download
+          </button>
+          <div class="float-left" style="opacity: 0.5">
+            <i
+              >Please refer to <a href="link_to_topic">this topic</a> for
+              usage.</i
+            >
+          </div>
+        </div>
+      </center>
+
+      <br />
+      <div class="output" id="output"></div>
+    </div>
+    <br <div="" class="col-xs-12" />
+    <br />
+    <script src="js/download-img.js"></script>
+    <script src="js/download.js"></script>
+    <script
+      src="js/app.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#downloadOutput").click(function () {
+          //generated").css("background-color", "transparent");
+          domtoimage
+            .toBlob(document.getElementById("output"))
+            .then(function (blob) {
+              window.saveAs(
+                blob,
+                new Date()
+                  .toLocaleString()
+                  .replaceAll(",", "_")
+                  .replaceAll(" ", "_")
+                  .replaceAll("/", "-")
+                  .replace("__", "_")
+                  .replaceAll(":", "-") +
+                  "_" +
+                  "chatlog.png"
+              );
+            })
+            .then(function (blob) {
+              $(".generated").css("background-color", "transparent");
+            });
+        });
+        $("#downloadOutputTransparent").click(function () {
+          $(".generated").css("background-color", "transparent");
+          domtoimage
+            .toBlob(document.getElementById("output"))
+            .then(function (blob) {
+              window.saveAs(
+                blob,
+                new Date()
+                  .toLocaleString()
+                  .replaceAll(",", "_")
+                  .replaceAll(" ", "_")
+                  .replaceAll("/", "-")
+                  .replace("__", "_")
+                  .replaceAll(":", "-") +
+                  "_" +
+                  "chatlog.png"
+              );
+            })
+            .then(function (blob) {
+              $(".generated").css("background-color", "transparent");
+            });
+        });
+      });
+    </script>
+
+    <script src="js/parse-text.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/color-picker.js"></script>
+    <script src="js/chatlog-parser.js"></script>
+  </body>
+</html>
