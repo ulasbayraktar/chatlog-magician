@@ -45,3 +45,7 @@ If you're looking for the HEX code of your desired color, you can select a color
 ##### Image
 
 ![hex color codes](https://i.imgur.com/UCi6aam.png)
+
+***
+#### Credits
+Thanks to KUnderwood for the tool name.
