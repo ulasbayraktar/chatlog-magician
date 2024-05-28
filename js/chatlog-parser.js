@@ -41,7 +41,6 @@ $(document).ready(function() {
             formattedText.toLowerCase().indexOf(", $") >= 0 && $(this).addClass("grey");
             formattedText.toLowerCase().indexOf("you have received $") >= 0 && $(this).addClass("grey");
 
-            formattedText.toLowerCase().indexOf("you can die") >= 0 && $(this).addClass("death");
             formattedText.toLowerCase().indexOf(" whispers:") >= 0 && $(this).addClass("whisper");
             formattedText.toLowerCase().indexOf(" whispers:") >= 0 && formattedText.toLowerCase().indexOf("(car)") >= 0 && $(this).addClass("carwhisper");
             formattedText.toLowerCase().indexOf(" (cellphone)") >= 0 && $(this).addClass("whisper");
