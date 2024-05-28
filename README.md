@@ -48,4 +48,4 @@ If you're looking for the HEX code of your desired color, you can select a color
 
 ***
 #### Credits
-Thanks to KUnderwood for the tool name.
+Thanks to [@KUnderwood](https://github.com/danjdewhurst) for the tool name.
