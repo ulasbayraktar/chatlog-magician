@@ -8,9 +8,7 @@ body {
 
 html::-webkit-scrollbar {
     width: 0px;
-    /* Dikey kaydırma çubuğu genişliğini sıfıra ayarlar */
     background-color: transparent;
-    /* Kaydırma çubuğu arkaplan rengini şeffaf yapar */
 }
 
 .textarea-input {
@@ -69,7 +67,7 @@ html::-webkit-scrollbar {
 }
 
 label {
-    margin-right: 5px; /* Çok az mesafe bırakmak için */
+    margin-right: 5px;
 
     text-transform: uppercase;
     font-size: .8em;
@@ -277,15 +275,15 @@ pre.pre-scrollable {
 
 #jobb .col-xs-12 {
     display: flex;
-    align-items: center; /* Dikey hizalamayı ortalar */
+    align-items: center;
 }
 
 .color-picker-label {
-    margin-right: 10px; /* Etiket ile input arasına boşluk ekler */
+    margin-right: 10px;
 }
 
 .color-picker-input {
-    flex-shrink: 0; /* Input alanının küçülmesini engeller */
+    flex-shrink: 0;
 }
 
 .clog_settings .row {
@@ -309,18 +307,18 @@ pre.pre-scrollable {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Logo'yu textarea'nın tam ortasına hizalar */
-    pointer-events: none; /* Overlay'in üzerindeki textarea'ya tıklanmasını engeller */
+    transform: translate(-50%, -50%); 
+    pointer-events: none;
 }
 
 .logo-overlay img {
     opacity: 15%;
-    max-width: auto; /* Logonun maksimum genişliği, gereksinimlerinize göre ayarlayabilirsiniz */
-    max-height: auto; /* Logonun maksimum yüksekliği, gereksinimlerinize göre ayarlayabilirsiniz */
+    max-width: auto; 
+    max-height: auto; 
 }
 
 .cube-container {
-    perspective: 800px; /* Perspektif etkisi için mesafe */
+    perspective: 800px;
     width: 200px;
     height: 200px;
     margin: 0 auto;
