@@ -23,12 +23,13 @@ Chatlog Magician, converts SA-MP logs into images, making screenshot editing eas
 ### Says
 
 ```
-* Martin Peterson says: Hello LS-RP!
-* Martin Peterson says [low]: Hello LS-RP!
+Martin Peterson says: Hello LS-RP!
+Martin Peterson says [low]: Hello LS-RP!
 ```
 ##### Image
 
-![says example](https://i.imgur.com/ls5jRBA.png)
+![image](https://github.com/ulasbayraktar/chatlog-magician/assets/73671806/45a56bb8-09f2-423f-a1e7-7f9be83ef87b)
+
 
 ### HEX Color Codes
 
