@@ -32,6 +32,11 @@ Chatlog Magician, converts SA-MP logs into images, making screenshot editing eas
 
 ### HEX Color Codes
 
+If you're looking for the HEX code of your desired color, you can select a color from the icon at the top right and use the code that appears below within curly brackets, like {FFFFFF}.
+
+![hex color codes](https://i.imgur.com/VUn5ddP.png)
+
+
 ```
 {ffffff}I LOVE {ecbf32}LS-RP{ffffff}!
 ```
