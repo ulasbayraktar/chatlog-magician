@@ -82,7 +82,7 @@ $(document).ready(function() {
             $.jStorage.set("lastLineHeight", "0")),
         $("input[name='font-label']").bind("input propertychange", function() {
             var newSize = parseInt($(this).val());
-            if (newSize >= 16 && newSize <= 64) {
+            if (newSize >= 1 && newSize <= 64) {
                 $(".output").css({
                     "font-size": newSize + "px",
                     "line-height": newSize + "px",
