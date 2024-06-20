@@ -73,9 +73,9 @@ $(document).ready(function() {
         });
     var r = $.jStorage.get("lastFontSize"),
         o = $.jStorage.get("lastLineHeight");
-    r || o ? ($(".output").css({
+        r || o ? ($(".output").css({
                 "font-size": $.jStorage.get("lastFontSize") + "px",
-                "line-height": $.jStorage.get("lastLineHeight") + "px",
+                "line-height": ($.jStorage.get("lastFontSize") - 10) + "px",
             }),
             $("#font-label").text(
                 "font size (" + $.jStorage.get("lastFontSize") + "px):"
@@ -87,7 +87,7 @@ $(document).ready(function() {
             if (newSize >= 1 && newSize <= 64) {
                 $(".output").css({
                     "font-size": newSize + "px",
-                    "line-height": newSize + "px",
+                    "line-height": (newSize - 10) + "px",
                 });
                 $("#font-label").text("font size (" + newSize + "px):");
                 $.jStorage.set("lastFontSize", newSize);
