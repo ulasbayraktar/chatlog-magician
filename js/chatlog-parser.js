@@ -92,10 +92,15 @@ $(document).ready(function() {
                 "font size (" + $.jStorage.get("lastFontSize") + "px):"
             )) :
         ($.jStorage.set("lastFontSize", "12"),
-            $.jStorage.set("lastLineHeight", "0")),
+        $.jStorage.set("lastLineHeight", ($.jStorage.get("lastFontSize") - 10))),
+        $(".output").css({
+            "font-size": "12px",
+            "line-height": "2px",
+        })
+        
         $("input[name='font-label']").bind("input propertychange", function() {
             var newSize = parseInt($(this).val());
-            if (newSize >= 1 && newSize <= 64) {
+            if (newSize >= 10 && newSize <= 64) {
                 $(".output").css({
                     "font-size": newSize + "px",
                     "line-height": (newSize - 10) + "px",
