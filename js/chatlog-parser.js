@@ -34,7 +34,6 @@ $(document).ready(function() {
 
             navigator.userAgent.indexOf("Chrome") != -1 && $(this).append(" ⠀");
 
-
             formattedText.toLowerCase().indexOf("*") >= 0 && $(this).addClass("me");
 
             formattedText.toLowerCase().indexOf(" says:") >= 0 && $(this).addClass("white");
@@ -49,9 +48,12 @@ $(document).ready(function() {
             formattedText.toLowerCase().indexOf(":o<") >= 0 && $(this).addClass("whisper");
             formattedText.toLowerCase().indexOf(" (phone - low)") >= 0 && $(this).addClass("whisper");
 
+            formattedText.toLowerCase().indexOf(" [san interview]") == 0 && $(this).addClass("news");
             formattedText.toLowerCase().indexOf("[san interview]") == 0 && $(this).addClass("news");
+            formattedText.toLowerCase().indexOf(" **[ch:") == 0 && $(this).addClass("radio");
             formattedText.toLowerCase().indexOf("**[ch:") == 0 && $(this).addClass("radio");
 
+            formattedText.toLowerCase().startsWith(" ** [") && formattedText.toLowerCase().includes("]") && /\[.*?\]/.test(formattedText) && $(this).addClass("dep");
             formattedText.toLowerCase().startsWith("** [") && formattedText.toLowerCase().includes("]") && /\[.*?\]/.test(formattedText) && $(this).addClass("dep");
 
 
