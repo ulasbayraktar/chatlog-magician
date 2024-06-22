@@ -9,7 +9,7 @@ $(document).ready(function() {
         for (var e = $("textarea").val().replace("<script>", "").replace("</script>", "").split("\n"), t = 0; t < e.length; t++)
             $(".output").append(
                 '<div class="generated" id="chatlogOutput">' +
-                (useRegex(e[t]) ? e[t].slice(11) : e[t].slice(0)) +
+                (useRegex(e[t]) ? e[t].slice(10) : e[t].slice(0)) +
                 '</div><div class="clear"></div>'
             );
         $(".generated").each(function() {
@@ -33,6 +33,8 @@ $(document).ready(function() {
             var formattedText = formattedLines.join('<br>');
 
             navigator.userAgent.indexOf("Chrome") != -1 && $(this).append(" ⠀");
+
+
             formattedText.toLowerCase().indexOf("*") >= 0 && $(this).addClass("me");
 
             formattedText.toLowerCase().indexOf(" says:") >= 0 && $(this).addClass("white");
@@ -46,6 +48,13 @@ $(document).ready(function() {
             formattedText.toLowerCase().indexOf(" (phone)") >= 0 && $(this).addClass("whisper");
             formattedText.toLowerCase().indexOf(":o<") >= 0 && $(this).addClass("whisper");
             formattedText.toLowerCase().indexOf(" (phone - low)") >= 0 && $(this).addClass("whisper");
+
+            formattedText.toLowerCase().indexOf("[san interview]") == 0 && $(this).addClass("news");
+            formattedText.toLowerCase().indexOf("**[ch:") == 0 && $(this).addClass("radio");
+
+            formattedText.toLowerCase().startsWith("** [") && formattedText.toLowerCase().includes("]") && /\[.*?\]/.test(formattedText) && $(this).addClass("dep");
+
+
 
             $(this).html(formattedText); 
 
